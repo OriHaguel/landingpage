@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
 import { AppHeader } from './cmps/AppHeader'
+import { Home } from './page/Home'
 
 
 
@@ -15,7 +16,7 @@ export function RootCmp() {
 
             <main>
                 <Routes>
-                    {/* <Route path='/' element={< />} /> */}
+                    <Route path='/' element={<Home />} />
 
 
                 </Routes>

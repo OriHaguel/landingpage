@@ -36,8 +36,7 @@ export function AppHeader() {
             <div className="app-header__background"></div>
             <div className="app-header__content">
                 <h1 className="app-header__logo">
-                    <span className="app-header__logo-text">Your</span>
-                    <span className="app-header__logo-highlight">App</span>
+                    <span className="app-header__logo-highlight">Ori Haguel</span>
                 </h1>
                 <button
                     className={`app-header__menu-toggle ${isMenuOpen ? 'open' : ''}`}
