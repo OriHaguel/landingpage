@@ -50,9 +50,9 @@ export function AppHeader() {
                 </button>
                 <nav className={`app-header__nav ${isMenuOpen ? 'open' : ''}`}>
                     <Link to="/" className="app-header__link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                    <Link to="/about" className="app-header__link" onClick={() => setIsMenuOpen(false)}>About</Link>
-                    <Link to="/services" className="app-header__link" onClick={() => setIsMenuOpen(false)}>Services</Link>
-                    <Link to="/contact" className="app-header__link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>About</Link>
+                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>Services</Link>
+                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
                 </nav>
             </div>
         </header>
