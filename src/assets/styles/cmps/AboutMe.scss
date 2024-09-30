@@ -1,0 +1,56 @@
+.about-me-container {
+    h2 {
+        margin-top: rem(10px);
+        font-size: rem(35px);
+    }
+
+    .about-me {
+        margin-top: rem(50px);
+        padding: 1.5rem;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+        margin-bottom: 180px;
+
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #34495e;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .download-cv-btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: rem(14px) rem(28px);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: rem(18px);
+            font-weight: 600;
+            margin: rem(5px) 0; // Reduced from rem(20px) 0
+            cursor: pointer;
+            border-radius: rem(30px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                background-color: darken(#4CAF50, 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            &:active {
+                background-color: darken(#4CAF50, 15%);
+                transform: translateY(1px);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
