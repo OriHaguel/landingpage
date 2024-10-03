@@ -2,7 +2,7 @@
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    padding: 20px; // Reduced padding
+    padding: 40px; // Reduced padding
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,12 +53,4 @@
     margin: 0 0 12px 0;
     text-align: center;
     color: #333;
-}
-
-.skill-description {
-    font-size: 14px;
-    text-align: center;
-    color: #666;
-    margin: 0;
-    line-height: 1.6;
 }
