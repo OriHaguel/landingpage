@@ -4,20 +4,18 @@ import { Link } from 'react-router-dom';
 
 export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [scrollPosition, setScrollPosition] = useState(0);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosition(window.pageYOffset);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const scrollToPosition = (position) => {
+        window.scrollTo({
+            top: position,
+            behavior: 'smooth'
+        });
+        setIsMenuOpen(false);
+    };
 
     // Close menu when clicking outside
     useEffect(() => {
@@ -32,7 +30,7 @@ export function AppHeader() {
     }, [isMenuOpen]);
 
     return (
-        <header className={`app-header ${scrollPosition > 50 ? 'scrolled' : ''}`}>
+        <header className="app-header">
             <div className="app-header__background"></div>
             <div className="app-header__content">
                 <h1 className="app-header__logo">
@@ -49,10 +47,10 @@ export function AppHeader() {
                     <span></span>
                 </button>
                 <nav className={`app-header__nav ${isMenuOpen ? 'open' : ''}`}>
-                    <Link to="/" className="app-header__link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>About</Link>
-                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>Services</Link>
-                    <Link className="app-header__link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                    <Link className="app-header__link" onClick={() => scrollToPosition(0)}>Home</Link>
+                    <Link className="app-header__link" onClick={() => scrollToPosition(0)}>About</Link>
+                    <Link className="app-header__link" onClick={() => scrollToPosition(460)}>Proficiencies</Link>
+                    <Link className="app-header__link" onClick={() => scrollToPosition(1000)}>Projects</Link>
                 </nav>
             </div>
         </header>
