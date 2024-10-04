@@ -1,6 +1,6 @@
 // Setup
-@import "setup/variables";
 @import "setup/functions";
+@import "setup/variables";
 @import "setup/mixins";
 @import "setup/typography";
 
@@ -21,3 +21,4 @@
 @import "cmps/AppHeader";
 @import "cmps/SkillCard";
 @import "cmps/AboutMe";
+@import "cmps/MyProjects";

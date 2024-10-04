@@ -3,7 +3,7 @@ import cv from '../assets/cv/cv.pdf'
 export function AboutMe() {
     return (
         <section className="about-me-container">
-            <h1>About Ori Haguel - Full Stack Developer</h1>
+            <h1>About Me</h1>
             <article className="about-me">
                 <p>
                     I'm Ori Haguel, a Full Stack Developer with a passion for creating innovative solutions.

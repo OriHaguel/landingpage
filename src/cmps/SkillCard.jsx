@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-export const SkillCard = memo(({ skill }) => {
+export const SkillCard = memo(({ skill, txt }) => {
     const svgIcons = {
         react: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" width="40" height="40">
@@ -42,6 +42,12 @@ export const SkillCard = memo(({ skill }) => {
                 <path d="M15.9.034c-.035-.07-.07-.017-.105.017.017.35-.105.662-.296.96-.21.296-.488.523-.767.767-1.55 1.342-2.77 2.963-3.747 4.776-1.3 2.44-1.97 5.055-2.16 7.808-.087.993.314 4.497.627 5.508.854 2.684 2.388 4.933 4.375 6.885.488.47 1.01.906 1.55 1.325.157 0 .174-.14.21-.244a4.78 4.78 0 0 0 .157-.68l.35-2.614L15.9.034z" fill="#6cac48" />
                 <path d="M16.754 28.845c.035-.4.227-.732.436-1.063-.21-.087-.366-.26-.488-.453-.105-.174-.192-.383-.26-.575-.244-.732-.296-1.5-.366-2.248v-.453c-.087.07-.105.662-.105.75a17.37 17.37 0 0 1-.314 2.353c-.052.314-.087.627-.28.906 0 .035 0 .07.017.122.314.924.4 1.865.453 2.824v.35c0 .418-.017.33.33.47.14.052.296.07.436.174.105 0 .122-.087.122-.157l-.052-.575v-1.604c-.017-.28 0-.558.07-.82z" fill="#c2bfbf" />
             </svg>
+        ),
+        git: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" width="50" height="50">
+                <title>Git Logo</title>
+                <path d="M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.33 8.33 10.567 10.567a7.03 7.03 0 0 1 8.834 8.955l10.183 10.184a7.03 7.03 0 1 1-4.218 3.975l-9.5-9.5v24.953a7.03 7.03 0 1 1-5.797-.189V33.97a7.03 7.03 0 0 1-3.812-9.234L28.223 13.37 1.848 39.745a5.918 5.918 0 0 0 0 8.372l40.12 40.12a5.918 5.918 0 0 0 8.372 0l39.816-39.816a5.918 5.918 0 0 0 0-8.456z" fill="#f03c2e" />
+            </svg>
         )
     };
 
@@ -52,7 +58,7 @@ export const SkillCard = memo(({ skill }) => {
         <article className="skill-card">
             <div className="skill-icon" aria-hidden="true">{icon}</div>
             <h2 className="skill-name">{skill || 'Unknown Skill'}</h2>
-            <p>Detailed description of {skill} and its applications in web development. This technology is crucial for building modern, efficient web applications.</p>
+            <p>{txt}</p>
         </article>
     );
 })
