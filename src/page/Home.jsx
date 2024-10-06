@@ -2,6 +2,7 @@ import { SkillCard } from "../cmps/SkillCard";
 import { AboutMe } from '../cmps/AboutMe';
 import { useState } from "react";
 import { MyProjects } from "../cmps/MyProjects";
+import { FormMsg } from "../cmps/FormMsg";
 export function Home() {
     return (
         <div className="home-page">
@@ -18,6 +19,7 @@ export function Home() {
                         <SkillCard skill="Git" txt={'Experienced in version control with Git, facilitating collaborative development and maintaining code integrity across projects.'} />
                     </div>
                     <MyProjects />
+                    <FormMsg />
                 </div>
             </main>
         </div>
