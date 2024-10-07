@@ -3,15 +3,27 @@
     h1 {
         font-size: $font-size-title;
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            max-width: 90%; // Limit width on mobile
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .projects-wrapper {
         display: flex;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .project-container {
-            width: 500px;
+            width: 450px;
             height: auto;
             margin-bottom: 20px;
             background-color: #ffffff;
@@ -19,6 +31,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+            @media (max-width: 600px) {
+                width: 90%;
+                max-width: 450px;
+            }
 
             &:hover {
                 transform: translateY(-5px);
@@ -51,9 +68,5 @@
                 }
             }
         }
-
-
     }
-
-
 }

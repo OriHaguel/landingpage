@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -9,11 +9,13 @@ export function AppHeader() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const scrollToPosition = (position) => {
-        window.scrollTo({
-            top: position,
-            behavior: 'smooth'
-        });
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const yOffset = -80; // Adjust this value based on your header height
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
         setIsMenuOpen(false);
     };
 
@@ -47,10 +49,10 @@ export function AppHeader() {
                     <span></span>
                 </button>
                 <nav className={`app-header__nav ${isMenuOpen ? 'open' : ''}`}>
-                    <Link className="app-header__link" onClick={() => scrollToPosition(0)}>Home</Link>
-                    <Link className="app-header__link" onClick={() => scrollToPosition(0)}>About</Link>
-                    <Link className="app-header__link" onClick={() => scrollToPosition(460)}>Proficiencies</Link>
-                    <Link className="app-header__link" onClick={() => scrollToPosition(1000)}>Projects</Link>
+                    <Link className="app-header__link" onClick={() => scrollToSection('about')}>About</Link>
+                    <Link className="app-header__link" onClick={() => scrollToSection('proficiencies')}>Proficiencies</Link>
+                    <Link className="app-header__link" onClick={() => scrollToSection('projects')}>Projects</Link>
+                    <Link className="app-header__link" onClick={() => scrollToSection('contacts')}>Contacts</Link>
                 </nav>
             </div>
         </header>

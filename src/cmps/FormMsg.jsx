@@ -7,7 +7,6 @@ export const FormMsg = () => {
         email: '',
         message: '',
     });
-    console.log('formData', formData);
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -27,7 +26,7 @@ export const FormMsg = () => {
     };
 
     return (
-        <div className="form-msg-container">
+        <div className="form-msg-container" id="contacts">
             <h2 className="form-title">Contact Me</h2>
             <form onSubmit={handleSubmit} className="form-msg">
                 <div className="form-group">

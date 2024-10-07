@@ -4,7 +4,7 @@ import gmail from "../assets/img/gmail.png"
 
 export function MyProjects() {
     return (
-        <section className="my-projects-container">
+        <section className="my-projects-container" id="projects">
             <h1>My Projects</h1>
             <div className="projects-wrapper">
                 <div className="project-container">

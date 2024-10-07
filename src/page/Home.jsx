@@ -9,7 +9,7 @@ export function Home() {
             <main className="home-container">
                 <AboutMe />
                 <div className="content">
-                    <h2 className="proficiencies-title">Proficiencies</h2>
+                    <h2 className="proficiencies-title" id="proficiencies">Proficiencies</h2>
                     <div className="skills-list">
                         <SkillCard skill="react" txt={'Proficient in building dynamic UIs with React, leveraging its component-based architecture for efficient and maintainable code.'} />
                         <SkillCard skill="nodejs" txt={'Experienced in server-side JavaScript, using Node.js to create scalable and high-performance backend applications.'} />
