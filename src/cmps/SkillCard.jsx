@@ -114,10 +114,10 @@ export const SkillCard = memo(({ skill, txt, animationDirection }) => {
     const icon = svgIcons[iconKey] || <div className="fallback-icon" aria-hidden="true">?</div>;
 
     const directions = [
-        { x: -50 },  // left
-        { y: -50 },  // top
-        { x: 50 },   // right
-        { y: 50 }    // bottom
+        { x: -350 },  // left
+        { y: -350 },  // top
+        { x: 350 },   // right
+        { y: 350 }    // bottom
     ];
 
     const cardVariants = {
@@ -127,7 +127,7 @@ export const SkillCard = memo(({ skill, txt, animationDirection }) => {
             x: 0,
             y: 0,
             transition: {
-                type: "spring",
+                type: "",
                 damping: 12,
                 stiffness: 300
             }

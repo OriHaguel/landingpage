@@ -6,10 +6,11 @@ import { FormMsg } from "../cmps/FormMsg";
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import sky from "../assets/img/sky.png"
+import secondSky from "../assets/img/sky2.jpg"
 export function Home() {
     const { scrollY } = useScroll();
-    const mountainY = useTransform(scrollY, [0, 2000], [0, 200]);
-    const moonY = useTransform(scrollY, [0, 1500], [1500, 30]);
+    const skyY = useTransform(scrollY, [0, -2000], [0, 200]);
+    const secondSkyY = useTransform(scrollY, [0, 2000], [0, -200]);
 
     const controls = useAnimation();
     const [ref, inView] = useInView({
@@ -41,30 +42,31 @@ export function Home() {
             scale: 1,
             transition: {
                 delayChildren: 0.3,
-                staggerChildren: 0.2
+                staggerChildren: 0.1
             }
         }
     };
 
     return (
         <div className="home-page relative overflow-hidden">
-            {/* <motion.div
-                className="fixed top-20 right-20 w-20 h-20 "
-                style={{
-                    y: moonY,
-                    backgroundImage: `url(${moon})`,
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-
-                }}
-            /> */}
             <motion.div
                 className="fixed inset-0 w-full h-full z-0"
                 style={{
-                    y: mountainY,
+                    y: secondSkyY,
+                    backgroundImage: `url(${secondSky})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            />
+            <motion.div
+                className="fixed inset-0 w-full h-full z-0"
+                style={{
+                    y: skyY,
                     backgroundImage: `url(${sky})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'bottom',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             />
 
