@@ -3,10 +3,14 @@ import { SkillCard } from "../cmps/SkillCard";
 import { AboutMe } from '../cmps/AboutMe';
 import { MyProjects } from "../cmps/MyProjects";
 import { FormMsg } from "../cmps/FormMsg";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import sky from "../assets/img/sky.png"
 export function Home() {
+    const { scrollY } = useScroll();
+    const mountainY = useTransform(scrollY, [0, 2000], [0, 200]);
+    const moonY = useTransform(scrollY, [0, 1500], [1500, 30]);
+
     const controls = useAnimation();
     const [ref, inView] = useInView({
         triggerOnce: false,
@@ -43,8 +47,28 @@ export function Home() {
     };
 
     return (
-        <div className="home-page">
-            <main className="home-container">
+        <div className="home-page relative overflow-hidden">
+            {/* <motion.div
+                className="fixed top-20 right-20 w-20 h-20 "
+                style={{
+                    y: moonY,
+                    backgroundImage: `url(${moon})`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat',
+
+                }}
+            /> */}
+            <motion.div
+                className="fixed inset-0 w-full h-full z-0"
+                style={{
+                    y: mountainY,
+                    backgroundImage: `url(${sky})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'bottom',
+                }}
+            />
+
+            <main className="home-container relative z-20">
                 <AboutMe />
                 <div className="content">
                     <h2 className="proficiencies-title" id="proficiencies">Proficiencies</h2>
