@@ -7,6 +7,8 @@ import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import sky from "../assets/img/sky.png"
 import secondSky from "../assets/img/sky2.jpg"
+import { MainSection } from '@/cmps/MainSection';
+
 export function Home() {
     const { scrollY } = useScroll();
     const skyY = useTransform(scrollY, [0, -2000], [0, 200]);
@@ -71,6 +73,7 @@ export function Home() {
             />
 
             <main className="home-container relative z-20">
+                <MainSection />
                 <AboutMe />
                 <div className="content">
                     <h2 className="proficiencies-title" id="proficiencies">Proficiencies</h2>
