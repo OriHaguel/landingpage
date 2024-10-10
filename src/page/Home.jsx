@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { SkillCard } from "../cmps/SkillCard";
 import { AboutMe } from '../cmps/AboutMe';
 import { MyProjects } from "../cmps/MyProjects";
@@ -11,12 +11,12 @@ import { MainSection } from '@/cmps/MainSection';
 
 export function Home() {
     const { scrollY } = useScroll();
-    const skyY = useTransform(scrollY, [0, -2000], [0, 200]);
-    const secondSkyY = useTransform(scrollY, [0, 2000], [0, -200]);
+    const skyY = useTransform(scrollY, [0, 3000], [0, 50]);
+    const secondSkyY = useTransform(scrollY, [0, 3000], [0, -50]);
 
     const controls = useAnimation();
     const [ref, inView] = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.1,
     });
 
@@ -29,11 +29,11 @@ export function Home() {
     }, [controls, inView]);
 
     const skillsData = [
-        { skill: "react", txt: 'Proficient in building dynamic UIs with React, leveraging its component-based architecture for efficient and maintainable code.' },
-        { skill: "nodejs", txt: 'Experienced in server-side JavaScript, using Node.js to create scalable and high-performance backend applications.' },
-        { skill: "sass", txt: 'Skilled in writing clean and organized CSS with Sass, utilizing its powerful features for more maintainable stylesheets.' },
-        { skill: "redux", txt: 'Adept at managing complex application state with Redux, ensuring predictable data flow in large-scale React applications.' },
-        { skill: "mongodb", txt: 'Proficient in working with MongoDB, designing efficient NoSQL database schemas and integrating them with Node.js applications.' },
+        { skill: "React", txt: 'Proficient in building dynamic UIs with React, leveraging its component-based architecture for efficient and maintainable code.' },
+        { skill: "Nodejs", txt: 'Experienced in server-side JavaScript, using Node.js to create scalable and high-performance backend applications.' },
+        { skill: "Sass", txt: 'Skilled in writing clean and organized CSS with Sass, utilizing its powerful features for more maintainable stylesheets.' },
+        { skill: "Redux", txt: 'Adept at managing complex application state with Redux, ensuring predictable data flow in large-scale React applications.' },
+        { skill: "Mongodb", txt: 'Proficient in working with MongoDB, designing efficient NoSQL database schemas and integrating them with Node.js applications.' },
         { skill: "Git", txt: 'Experienced in version control with Git, facilitating collaborative development and maintaining code integrity across projects.' },
     ];
 
@@ -43,7 +43,7 @@ export function Home() {
             opacity: 1,
             scale: 1,
             transition: {
-                delayChildren: 0.3,
+                delayChildren: 0.1,
                 staggerChildren: 0.1
             }
         }
@@ -71,12 +71,11 @@ export function Home() {
                     backgroundRepeat: 'no-repeat',
                 }}
             />
-
             <main className="home-container relative z-20">
                 <MainSection />
                 <AboutMe />
                 <div className="content">
-                    <h2 className="proficiencies-title" id="proficiencies">Proficiencies</h2>
+                    <h2 className="proficiencies-title" id="Technologies">Technologies</h2>
                     <motion.div
                         ref={ref}
                         className="skills-list"

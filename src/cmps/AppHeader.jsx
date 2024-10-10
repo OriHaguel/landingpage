@@ -50,7 +50,7 @@ export function AppHeader() {
                 </button>
                 <nav className={`app-header__nav ${isMenuOpen ? 'open' : ''}`}>
                     <Link className="app-header__link" onClick={() => scrollToSection('about')}>About</Link>
-                    <Link className="app-header__link" onClick={() => scrollToSection('proficiencies')}>Proficiencies</Link>
+                    <Link className="app-header__link" onClick={() => scrollToSection('Technologies')}>Technologies</Link>
                     <Link className="app-header__link" onClick={() => scrollToSection('projects')}>Projects</Link>
                     <Link className="app-header__link" onClick={() => scrollToSection('contacts')}>Contacts</Link>
                 </nav>

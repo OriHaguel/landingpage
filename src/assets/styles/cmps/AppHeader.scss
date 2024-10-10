@@ -73,13 +73,14 @@
 
     &__link {
         text-decoration: none;
-        color: #ffffff;
+        color: #000000;
         font-weight: 600;
         padding: 0.5rem 1rem;
         // border-radius: 20px;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
+
 
         &::before {
             content: '';

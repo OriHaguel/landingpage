@@ -12,7 +12,7 @@
 }
 
 .text-content {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .name {
@@ -89,14 +89,13 @@
     }
 
     &.outline {
-        background-color: transparent;
-        color: #18e857;
-        border: 2px solid #18e857;
+        color: #3C43B6;
+        border: 2px solid #3C43B6;
 
         &:hover {
             background-color: rgba(0, 123, 255, 0.05);
-            color: #0056b3;
-            border-color: #0056b3;
+            color: #ba2dba;
+            border-color: #ba2dba;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
@@ -105,6 +104,61 @@
     &:active {
         transform: translateY(1px);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// New styles for social media icons
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.15);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            border-radius: 50%;
+        }
+
+        svg {
+            width: 26px;
+            height: 26px;
+            fill: #3C43B6;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+            &::before {
+                transform: scale(1);
+            }
+
+            svg {
+                fill: #007bff;
+            }
+        }
     }
 }
 
@@ -120,5 +174,20 @@
 
     .description {
         font-size: 1rem;
+    }
+
+    .social-icons {
+        margin-top: 2rem;
+        gap: 1.5rem;
+
+        a {
+            width: 48px;
+            height: 48px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { msgService } from '../../services/msg.service';
+import { DropAnimation } from './DropAnimation';
 
 export const FormMsg = () => {
     const [formData, setFormData] = useState({
@@ -26,47 +27,49 @@ export const FormMsg = () => {
     };
 
     return (
-        <div className="form-msg-container" id="contacts">
-            <h2 className="form-title">Contact Me</h2>
-            <form onSubmit={handleSubmit} className="form-msg">
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows="4"
-                    ></textarea>
-                </div>
-                <button type="submit" className="submit-btn">
-                    Send Message
-                </button>
-            </form>
-        </div>
+        <DropAnimation>
+            <div className="form-msg-container" id="contacts">
+                <h2 className="form-title">Contact Me</h2>
+                <form onSubmit={handleSubmit} className="form-msg">
+                    <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                            rows="4"
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="submit-btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </DropAnimation>
     );
 };
 
