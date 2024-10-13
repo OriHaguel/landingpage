@@ -51,7 +51,7 @@ export function Home() {
 
     return (
         <div className="home-page relative overflow-hidden">
-            <motion.div
+            <div
                 className="fixed inset-0 w-full h-full z-0"
                 style={{
                     y: secondSkyY,
@@ -61,6 +61,23 @@ export function Home() {
                     backgroundRepeat: 'no-repeat',
                 }}
             />
+            {/* <div className="fixed inset-0 w-full h-full z-0" style={{
+                y: secondSkyY,
+                backgroundImage: `url(${secondSky})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}></div> */}
+            {/* <motion.div
+                className="fixed inset-0 w-full h-full z-0"
+                style={{
+                    y: secondSkyY,
+                    backgroundImage: `url(${secondSky})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            /> */}
             <motion.div
                 className="fixed inset-0 w-full h-full z-0"
                 style={{
