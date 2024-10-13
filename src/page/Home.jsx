@@ -20,6 +20,11 @@ export function Home() {
         threshold: 0.1,
     });
 
+    const isMobile = () => {
+        return window.matchMedia("(max-width: 768px)").matches;
+    };
+    const mobile = isMobile();
+
     useEffect(() => {
         if (inView) {
             controls.start("visible");
@@ -51,34 +56,15 @@ export function Home() {
 
     return (
         <div className="home-page relative overflow-hidden">
-            <div
-                className="fixed inset-0 w-full h-full z-0"
-                style={{
-                    y: secondSkyY,
-                    backgroundImage: `url(${secondSky})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            />
-            {/* <div className="fixed inset-0 w-full h-full z-0" style={{
+            {!mobile && <motion.div className="fixed inset-0 w-full h-full z-0" style={{
                 y: secondSkyY,
                 backgroundImage: `url(${secondSky})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-            }}></div> */}
-            {/* <motion.div
-                className="fixed inset-0 w-full h-full z-0"
-                style={{
-                    y: secondSkyY,
-                    backgroundImage: `url(${secondSky})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            /> */}
-            <motion.div
+            }}
+            />}
+            {!mobile && <motion.div
                 className="fixed inset-0 w-full h-full z-0"
                 style={{
                     y: skyY,
@@ -87,12 +73,12 @@ export function Home() {
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                 }}
-            />
+            />}
             <main className="home-container relative z-20">
                 <MainSection />
                 <AboutMe />
                 <div className="content">
-                    <h2 className="proficiencies-title" id="Technologies">Technologies</h2>
+                    <h1 className="proficiencies-title main-title" id="Technologies">Technologies</h1>
                     <motion.div
                         ref={ref}
                         className="skills-list"
