@@ -14,7 +14,8 @@ export function DropAnimation({ children }) {
             y: 0,
             transition: {
                 duration: 0.8,
-                ease: "easeOut"
+                ease: "easeOut",
+                delay: 0.2
             }
         }
     };
