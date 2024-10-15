@@ -15,8 +15,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-
-        // background: linear-gradient(135deg, rgb(194, 211, 255) 0%, rgb(194, 211, 255) 100%);
         transition: all 0.5s ease;
     }
 
@@ -76,11 +74,9 @@
         color: #000000;
         font-weight: 600;
         padding: 0.5rem 1rem;
-        // border-radius: 20px;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
-
 
         &::before {
             content: '';
@@ -139,7 +135,6 @@
     }
 }
 
-// Add responsive design
 @media (max-width: 768px) {
     .app-header {
         &__content {
@@ -208,7 +203,6 @@
     }
 }
 
-// Enhance animations
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -235,7 +229,6 @@
     }
 }
 
-// Add a subtle hover effect for the menu toggle
 .app-header__menu-toggle {
     &:hover {
         @media (min-width: 769px) {

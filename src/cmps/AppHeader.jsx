@@ -12,14 +12,13 @@ export function AppHeader() {
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            const yOffset = -80; // Adjust this value based on your header height
+            const yOffset = -80;
             const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
         setIsMenuOpen(false);
     };
 
-    // Close menu when clicking outside
     useEffect(() => {
         const closeMenu = (e) => {
             if (isMenuOpen && !e.target.closest('.app-header__nav') && !e.target.closest('.app-header__menu-toggle')) {

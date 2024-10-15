@@ -6,7 +6,6 @@
     .home-container {
         grid-column: 2;
         width: 100%;
-        /* Adjust this value based on your header height */
 
         .content {
             width: 100%;
@@ -21,7 +20,7 @@
                 position: relative;
 
                 @media (max-width: 768px) {
-                    max-width: 90%; // Limit width on mobile
+                    max-width: 90%;
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -29,8 +28,6 @@
 
             }
         }
-
-
     }
 }
 

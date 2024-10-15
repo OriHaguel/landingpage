@@ -97,11 +97,11 @@ $success-color: #2ecc71;
     }
 }
 
-// Add some basic responsiveness
 @media (max-width: 600px) {
     .form-msg-container {
         margin: 1rem;
         padding: 1.5rem;
+        margin-top: rem(40px);
     }
 
     .form-title {

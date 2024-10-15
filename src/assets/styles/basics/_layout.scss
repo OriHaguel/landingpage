@@ -6,16 +6,18 @@
 
 // Define color variables
 $main-title-desktop: #2c3e50; // Color for desktop
-$main-title-mobile: #fff; // Color for mobile
 
 // Main title styling
 .main-title {
     color: $main-title-desktop; // Default color for desktop
 
     @media (max-width: 768px) {
-        color: $main-title-mobile; // Color for mobile screens
+        background: linear-gradient(45deg, #2e40ff, #d2d1ff);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 }
+
 
 
 // ... existing code ...

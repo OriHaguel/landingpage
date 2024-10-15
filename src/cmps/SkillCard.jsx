@@ -125,7 +125,7 @@ export const SkillCard = memo(({ skill, txt, animationDirection }) => {
     ];
 
     const cardVariants = {
-        hidden: { opacity: 0, ...directions[animationDirection] },
+        hidden: { ...directions[animationDirection] },
         visible: {
             opacity: 1,
             x: 0,
@@ -133,7 +133,7 @@ export const SkillCard = memo(({ skill, txt, animationDirection }) => {
             transition: {
                 type: "",
                 damping: 12,
-                stiffness: 300
+                stiffness: 300,
             }
         }
     };

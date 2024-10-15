@@ -19,7 +19,7 @@
     font-size: 4rem;
     font-weight: 700;
     background: linear-gradient(45deg, #007bff, #00bcd4);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
@@ -49,7 +49,7 @@
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 50px; // Changed to pill shape
+    border-radius: 50px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.75px;
@@ -107,7 +107,7 @@
     }
 }
 
-// New styles for social media icons
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -162,7 +162,7 @@
     }
 }
 
-// Additional styles for responsiveness
+
 @media (max-width: 768px) {
     .name {
         font-size: 3rem;
