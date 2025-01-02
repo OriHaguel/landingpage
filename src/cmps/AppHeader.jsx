@@ -32,7 +32,6 @@ export function AppHeader() {
 
     return (
         <header className="app-header">
-            <div className="app-header__background"></div>
             <div className="app-header__content">
                 <h1 className="app-header__logo">
                     <span className="app-header__logo-highlight">Ori Haguel</span>
