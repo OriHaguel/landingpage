@@ -29,7 +29,7 @@ export function FormMsg() {
     }
 
     return (
-        <div className="w-full max-w-lg mx-auto">
+        <div className="w-[90%] max-w-lg mx-auto">
             <div className="bg-white border-2 border-blue-100 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="mb-8 animate-fadeIn">
                     <h2 className="text-3xl font-bold mb-2 text-blue-900 hover:text-blue-700 transition-colors duration-300">Let's Talk</h2>
